@@ -1,0 +1,12 @@
+/* Firebase configuration */
+
+import Rebase from 're-base';
+
+export default function FirebaseDetails() {
+  return Rebase.createClass({
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    storageBucket: "d",
+    });
+}

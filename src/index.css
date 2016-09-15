@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Mobile View */
+
+@media (max-width: 800px) {
+  .kk {
+    display: inline-block;
+    font-size: 17px;
+  }
+  .paper {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .date {
+    display: inline-block;
+    font-size: 17px;
+  }
+  h1 {
+    display: block;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 25px;
+  }
+  h2 {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .metadata {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 100%;
+  }
+}
+

@@ -1,0 +1,127 @@
+body {
+  background-color: #eee;
+  font-family: 'Lato', serif;
+}
+
+/* no bootstrap rounded borders */
+.sportitems .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.sportitems .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.paper {
+  background-color: #fff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
+
+.mainheader {
+  background-color: #2196F3;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+/* striped feel */
+.sportitems .list-group-item:nth-child(odd) {
+   background-color: #F9F9F9;
+}
+
+
+/* the event display styling */
+.main {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.dateblock {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+}
+.imageblock {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;  
+}
+
+.infoblock {
+  display: inline-block;
+  position: top;
+  margin-left: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.kk {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.date {
+  display: inline-block;
+  font-size: 15px;
+}
+
+h1 {
+  display: block;
+  font-weight: bold;
+  margin: 10px;
+}
+
+h2 {
+  display: block;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.metadata {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Spinner loader CSS */
+
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
