@@ -6,14 +6,18 @@ import moment from 'moment';
 import 'moment/locale/fi';
 import SportImage from './SportImage.js';
 
-const d = moment();
+/* Current date */
 const datum = moment();
+
+/* How much games will show */
+const d = moment();
 const lastDate = d.add(6, 'month').format();
 
 export default class ShowGames extends Component {
   constructor(props) {
     super(props);
     this.sortByKey = this.sortByKey.bind(this);
+    this.isToday = this.isToday.bind(this);
   }
   
   sortByKey(array, key) {
@@ -23,15 +27,12 @@ export default class ShowGames extends Component {
     });
   };
   
-  /* TO BE IMPLEMENTED
-  isDateToday(datetime) {
-    if (moment(d).format("DD-MM-YYYY") === moment(datetime).format("DD-MM-YYYY")) {
-        return true;
-        } else {
-        return false;
-        }
-  }*/
-
+  isToday(datetime) {
+    if (datum.format("YYYY-MM-DD") === moment(datetime).format("YYYY-MM-DD")) {
+      return true;
+    }
+  }
+  
   render() {
 
     const gamesByDate = this.sortByKey(this.props.data, 'datetime');
@@ -45,10 +46,12 @@ export default class ShowGames extends Component {
         <li className="list-group-item" key={game.key}>
           <div className="main">
             <div className="dateblock">
-              <span className="kk">{moment(game.datetime).format("MMM")}</span>
+              <span className="kk">{this.isToday(game.datetime) === true ? <span className="todayLabel">Tänään!</span>: moment(game.datetime).format("MMM")}</span>
               <h1>{moment(game.datetime).format("D")}</h1>
               <span className="date">{moment(game.datetime).format("dd")}</span>
+              
             </div>
+            
             <div className="infoblock"> 
               <h2>{game.home} - {game.away}</h2>
               <div className="metadata">
