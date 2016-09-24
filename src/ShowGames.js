@@ -1,6 +1,3 @@
-/* TODO
- - accent flag for today
-*/
 import React, { Component } from 'react';
 import moment from 'moment';
 import 'moment/locale/fi';
@@ -9,7 +6,7 @@ import SportImage from './SportImage.js';
 /* Current date */
 const datum = moment();
 
-/* How much games will show */
+/* How much games will be shown */
 const d = moment();
 const lastDate = d.add(6, 'month').format();
 

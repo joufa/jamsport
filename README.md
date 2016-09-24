@@ -3,7 +3,7 @@
 App to check your local sport events.
 
 - React
-- Firebase database
-- Bootstrap CSS
+- Firebase database/re-base bindings
+- Bootstrap
 
-Based on create-react-app boilerplate.
+Forked from create-react-app boilerplate.
